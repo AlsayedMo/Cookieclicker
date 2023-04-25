@@ -1,0 +1,43 @@
+@use "../abstracts/colors.scss";
+
+
+.save {
+    font-size: 100%;
+    height: min-content;
+    padding: 2rem;
+    background-color: map-get(colors.$cookie, "spots");
+    color: whitesmoke;
+    border: none;
+    width: 20rem;
+    transform: translateY(2.5rem);
+    border-radius: 0.5rem;
+    transition: 0.3s all;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    position: relative;
+    flex-shrink: 0;
+
+
+    &>i {
+        transition: 0.2s all;
+        transform: scale(0);
+        transform-origin: left;
+        display: block;
+        opacity: 0;
+        position: absolute;
+        left: 20%;
+    }
+
+    &:hover {
+        cursor: pointer;
+        background: whitesmoke;
+        color: map-get(colors.$cookie, "spots");
+    }
+
+    &:hover>i {
+        transform: scaleX(1);
+        opacity: 1;
+    }
+}

@@ -1,0 +1,41 @@
+@use "../abstracts/colors.scss";
+
+.avatar {
+    width: 10rem;
+    border-radius: 50%;
+    background: rgb(198, 198, 198);
+    height: 10rem;
+    position: relative;
+    overflow: hidden;
+    border: 0.5rem solid map-get(colors.$cookie, "spots");
+    cursor: pointer;
+
+    &__head {
+        width: 40%;
+        height: 40%;
+        background: map-get(colors.$cookie, "background");
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: 0.6s all;
+
+    }
+
+    &__body {
+        width: 60%;
+        height: 50%;
+        background: map-get(colors.$cookie, "spots");
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        top: 100%;
+        transform: translate(-50%, -50%);
+    }
+
+    &:hover &__head {
+        transform: translate(-50%, -50%) scale(1.4);
+        cursor: pointer;
+    }
+}

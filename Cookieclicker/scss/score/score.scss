@@ -1,0 +1,14 @@
+@use "../abstracts/colors.scss";
+
+.score {
+    font-size: 500%;
+    color: map-get(colors.$cookie, "spots");
+    padding: 2rem;
+    border-radius: 1rem;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background: whitesmoke;
+}

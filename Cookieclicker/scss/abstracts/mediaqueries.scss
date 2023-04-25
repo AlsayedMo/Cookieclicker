@@ -1,0 +1,38 @@
+@media screen and (max-width: 68.75rem) {
+    .save {
+        display: none;
+    }
+
+    .upgrades {
+        display: none;
+    }
+
+    .header {
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .main {
+        flex-direction: column-reverse;
+    }
+
+    .cookie {
+        transform: scale(0.7);
+
+        &:active {
+            transform: scale(0.4);
+        }
+    }
+
+    .score {
+        font-size: 250%;
+        width: 100%;
+    }
+
+    .upgradesMobile {
+        display: grid;
+        list-style: none;
+    }
+    
+
+}
